@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EcoBarrio</string>
+    <string name="ciudad">San Francisco · Gestión de residuos</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="correo">Correo electrónico</string>
+    <string name="clave">Contraseña</string>
+    <string name="servidor">Dirección del servidor</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="volver">Volver</string>
+    <string name="guardar">Guardar</string>
+    <string name="fcm_app_id" translatable="false"></string>
+    <string name="fcm_api_key" translatable="false"></string>
+    <string name="fcm_project_id" translatable="false"></string>
+    <string name="fcm_sender_id" translatable="false"></string>
+</resources>

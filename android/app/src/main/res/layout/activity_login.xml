@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:fitsSystemWindows="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+        <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/ic_hoja" android:contentDescription="EcoBarrio" android:layout_marginTop="24dp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="EcoBarrio" android:textSize="36sp" android:textStyle="bold" android:textColor="#173F30" android:layout_marginTop="16dp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ciudad" android:textSize="16sp" android:layout_marginBottom="26dp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tu barrio, más limpio" android:textSize="22sp" android:textStyle="bold" android:textColor="#173F30" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Registrá tus residuos y coordiná su recolección." android:textSize="16sp" android:layout_marginBottom="18dp" />
+        <EditText android:id="@+id/email" style="@style/Campo" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/correo" android:inputType="textEmailAddress" android:autofillHints="emailAddress" />
+        <EditText android:id="@+id/password" style="@style/Campo" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/clave" android:inputType="textPassword" android:autofillHints="password" />
+        <Button android:id="@+id/ingresar" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ingresar" android:layout_marginTop="12dp" />
+        <Button android:id="@+id/crearCuenta" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Crear cuenta ciudadana" />
+        <TextView android:id="@+id/error" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#A83232" android:accessibilityLiveRegion="polite" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Accesos de demostración" android:textStyle="bold" android:textSize="16sp" android:layout_marginTop="18dp" />
+        <LinearLayout android:id="@+id/accesos" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Servidor de la aplicación" android:textSize="14sp" android:layout_marginTop="18dp" />
+        <EditText android:id="@+id/servidor" style="@style/Campo" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/servidor" android:inputType="textUri" android:importantForAutofill="no" />
+    </LinearLayout>
+</ScrollView>

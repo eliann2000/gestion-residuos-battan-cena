@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fitsSystemWindows="true" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+        <TextView android:id="@+id/titulo" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="27sp" android:textStyle="bold" android:textColor="#173F30" android:layout_marginBottom="12dp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Categoría del residuo" android:textSize="16sp" />
+        <Spinner android:id="@+id/categoria" android:layout_width="match_parent" android:layout_height="52dp" />
+        <EditText android:id="@+id/cantidad" style="@style/Campo" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Cantidad estimada (kg)" android:inputType="numberDecimal" />
+        <EditText android:id="@+id/direccion" style="@style/Campo" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Dirección de recolección" android:inputType="textPostalAddress" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ubicación en San Francisco" android:textSize="16sp" android:layout_marginTop="12dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <EditText android:id="@+id/latitud" style="@style/Campo" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="Latitud" android:inputType="numberDecimal|numberSigned" />
+            <EditText android:id="@+id/longitud" style="@style/Campo" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="Longitud" android:inputType="numberDecimal|numberSigned" />
+        </LinearLayout>
+        <Button android:id="@+id/ubicacion" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Usar mi ubicación" />
+        <Button android:id="@+id/verUbicacion" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ver ubicación en el mapa" />
+        <EditText android:id="@+id/nota" style="@style/Campo" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Observaciones (opcional)" android:inputType="textMultiLine" android:singleLine="false" android:minLines="2" android:maxLines="4" />
+        <TextView android:id="@+id/ayuda" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ingresá las coordenadas o usá la ubicación del dispositivo. Los peligrosos se retiran con un equipo especial." android:textSize="14sp" android:layout_marginTop="12dp" />
+        <TextView android:id="@+id/error" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#A83232" android:accessibilityLiveRegion="polite" />
+        <Button android:id="@+id/guardar" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/guardar" android:layout_marginTop="12dp" />
+        <Button android:id="@+id/volver" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/volver" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,18 @@
+groups:
+  - name: residuos
+    rules:
+      - alert: ResiduosSinServicio
+        expr: sum(up{job="residuos"}) == 0 or absent(up{job="residuos"})
+        for: 1m
+        labels: {severity: critical}
+        annotations: {summary: "No hay instancias disponibles de la API"}
+      - alert: ResiduosErroresElevados
+        expr: sum(rate(residuos_http_errors_total[5m])) / clamp_min(sum(rate(residuos_http_requests_total[5m])), 0.001) > 0.05
+        for: 5m
+        labels: {severity: warning}
+        annotations: {summary: "Más de 5 % de respuestas con error del servidor"}
+      - alert: ResiduosLatenciaAlta
+        expr: sum(rate(residuos_http_duration_seconds_sum[5m])) / clamp_min(sum(rate(residuos_http_requests_total[5m])), 0.001) > 2
+        for: 5m
+        labels: {severity: warning}
+        annotations: {summary: "La latencia media supera los dos segundos"}

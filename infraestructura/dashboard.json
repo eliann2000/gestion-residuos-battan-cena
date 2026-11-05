@@ -1,0 +1,10 @@
+{
+  "uid": "residuos", "title": "Gestión de residuos", "schemaVersion": 39, "version": 1,
+  "refresh": "15s", "time": {"from":"now-15m","to":"now"},
+  "panels": [
+    {"id":1,"title":"Instancias disponibles","type":"stat","gridPos":{"x":0,"y":0,"w":8,"h":6},"datasource":{"uid":"prometheus","type":"prometheus"},"targets":[{"refId":"A","expr":"sum(up{job=\"residuos\"})"}]},
+    {"id":2,"title":"Solicitudes por segundo","type":"timeseries","gridPos":{"x":8,"y":0,"w":16,"h":6},"datasource":{"uid":"prometheus","type":"prometheus"},"targets":[{"refId":"A","expr":"sum(rate(residuos_http_requests_total[2m]))"}]},
+    {"id":3,"title":"Errores del servidor por segundo","type":"timeseries","gridPos":{"x":0,"y":6,"w":12,"h":8},"datasource":{"uid":"prometheus","type":"prometheus"},"targets":[{"refId":"A","expr":"sum(rate(residuos_http_errors_total[2m]))"}]},
+    {"id":4,"title":"Latencia media HTTP (segundos)","type":"timeseries","gridPos":{"x":12,"y":6,"w":12,"h":8},"datasource":{"uid":"prometheus","type":"prometheus"},"targets":[{"refId":"A","expr":"sum(rate(residuos_http_duration_seconds_sum[2m])) / clamp_min(sum(rate(residuos_http_requests_total[2m])), 0.001)"}]}
+  ]
+}
